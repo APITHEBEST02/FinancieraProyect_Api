@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Njpc5ZAwW4t+D2qLBUC2yu5x/2I8o4kNC7/JoWaY2h4o0oluzOWfKrjq5f/Olsp6yc7rY2VR7L8gdgX7ICBxbA==",
+  "dgSpecHash": "0rWTUosmOr1j7/10j/0t61/Fzz6GcmLStuItq7CKlN1xydAO4Xw6N+hymUoPz/tCSjTkCoAlWgLVvvJxYIIctw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\ApiFinanciera\\ApiFinanciera\\ApiFinanciera.csproj",
+  "projectFilePath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\ApiFinanciera\\ApiFinanciera.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lrico\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\lrico\\.nuget\\packages\\azure.identity\\1.11.3\\azure.identity.1.11.3.nupkg.sha512",
