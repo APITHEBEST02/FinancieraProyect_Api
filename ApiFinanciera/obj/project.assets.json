@@ -2217,11 +2217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\ApiFinanciera\\ApiFinanciera\\ApiFinanciera.csproj",
+      "projectUniqueName": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\ApiFinanciera\\ApiFinanciera.csproj",
       "projectName": "ApiFinanciera",
-      "projectPath": "D:\\GitHub\\ApiFinanciera\\ApiFinanciera\\ApiFinanciera.csproj",
+      "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\ApiFinanciera\\ApiFinanciera.csproj",
       "packagesPath": "C:\\Users\\lrico\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\ApiFinanciera\\ApiFinanciera\\obj\\",
+      "outputPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\ApiFinanciera\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2243,14 +2243,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\GitHub\\ApiFinanciera\\Application\\Application.csproj": {
-              "projectPath": "D:\\GitHub\\ApiFinanciera\\Application\\Application.csproj"
+            "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Application\\Application.csproj": {
+              "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Application\\Application.csproj"
             },
-            "D:\\GitHub\\ApiFinanciera\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\GitHub\\ApiFinanciera\\Domain\\Domain.csproj"
+            "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj"
             },
-            "D:\\GitHub\\ApiFinanciera\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\GitHub\\ApiFinanciera\\Infrastructure\\Infrastructure.csproj"
+            "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

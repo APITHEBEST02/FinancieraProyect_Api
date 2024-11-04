@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\ApiFinanciera\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\GitHub\\ApiFinanciera\\Domain\\Domain.csproj",
+      "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\lrico\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\ApiFinanciera\\Domain\\obj\\",
+      "outputPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
