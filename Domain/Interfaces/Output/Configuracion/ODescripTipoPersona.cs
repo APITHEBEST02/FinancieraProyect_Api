@@ -13,6 +13,6 @@ namespace Domain.Interfaces.Output.Configuracion
         Task<int> Insert(DescripTipoPersona value);
         Task<int> Update(DescripTipoPersona value);
         Task<List<DescripTipoPersona>> Select();
-        Task<List<DescripTipoPersona>> SelectId(int id);
+        Task<DescripTipoPersona> SelectId(int id);
     }
 }

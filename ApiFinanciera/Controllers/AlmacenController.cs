@@ -17,8 +17,8 @@ namespace ApiFinanciera.Controllers
             this.almacen = almacen;
         }
 
-        [HttpGet("/DeleteAlmacen/{id}")]
-        public async Task<ActionResult<int>> Delete(int id) {
+        [HttpDelete("DeleteAlmacen/{id}")]
+        public async Task<ActionResult<int>> Delete([FromRoute] int id) {
             var result = await almacen.Delete(id);
             if (result==null)
             {
@@ -28,7 +28,7 @@ namespace ApiFinanciera.Controllers
         }
 
         
-        [HttpPost("(/InsertAlmacen/")]
+        [HttpPost("InsertAlmacen")]
         public async Task<ActionResult<int>> Insert([FromBody] DtoRequestAlmacenInsert value) { 
             var result =  await almacen.Insert(value);
             if (result==null) { 
@@ -38,7 +38,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpPost("(/UpdateAlmacen/")]
+        [HttpPut("UpdateAlmacen")]
         public async Task<ActionResult<int>> Update([FromBody] DtoRequestAlmacenUpdate value)
         {
             var result = await almacen.Update(value);
@@ -49,7 +49,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpGet("/SelectAlmacen/")]
+        [HttpGet("SelectAlmacen")]
         public async Task<ActionResult<List<DtoResponseAlmacen>>> Select() { 
         
             var result = await almacen.Select();
@@ -60,8 +60,8 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpGet("/SelectIdAlmacen/{Id}")]
-        public async Task<ActionResult<DtoResponseAlmacen>> SelectId(int Id) {
+        [HttpGet("SelectIdAlmacen/{Id}")]
+        public async Task<ActionResult<DtoResponseAlmacen>> SelectId([FromRoute] int Id) {
             var result = await almacen.SelectId(Id);
             if (result == null )
             {

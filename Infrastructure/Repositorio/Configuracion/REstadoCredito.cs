@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Domain.Interfaces.Input.Configuracion;
+using Domain.Interfaces.Output.Configuracion;
 using Domain.Models.Configuracion;
 using Microsoft.Data.SqlClient;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositorio.Configuracion
 {
-    public class REstadoCredito : IEstadoCredito
+    public class REstadoCredito : OEstadoCredito
     {
         private readonly string _cn;
 
