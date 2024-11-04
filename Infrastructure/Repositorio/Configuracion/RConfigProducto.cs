@@ -2,6 +2,7 @@
 using Domain.Dtos.Request;
 using Domain.Dtos.Response;
 using Domain.Interfaces.Input.Configuracion;
+using Domain.Interfaces.Output.Configuracion;
 using Domain.Models.Configuracion;
 using Microsoft.Data.SqlClient;
 using System;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositorio.Configuracion
 {
-    public class RConfigProducto:IConfigProducto
+    public class RConfigProducto:OConfigProducto
     {
         private readonly string _cn;
 

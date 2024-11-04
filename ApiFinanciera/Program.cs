@@ -13,14 +13,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 string connectionString = builder.Configuration.GetConnectionString("sqlConnetion");
 
+
+//EndPoint de credito
 builder.Services.AddScoped<OCredito>(provider=>new RCredito(connectionString));
 builder.Services.AddScoped<ICredito, SCredito>();
 
+//EndPoint de credito calendario Det
 builder.Services.AddScoped<OCreditoCalendarioDet>(provider=>new RCreditoCalendarioDet(connectionString));
 builder.Services.AddScoped<ICreditoCalendarioDet,SCreditoCalendarioDet>();
 
+//EndPoint de Almacen
 builder.Services.AddScoped<OAlmacen>(provider => new RAlmacen(connectionString));
 builder.Services.AddScoped<IAlmacen, SAlmacen>();
+
+//EndPoint ConfigProducto
+builder.Services.AddScoped<OConfigProducto>(provider => new RConfigProducto(connectionString));
+builder.Services.AddScoped<IConfigProducto, SConfigProducto>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
