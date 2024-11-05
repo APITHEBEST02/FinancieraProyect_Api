@@ -28,7 +28,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     parameter.Add("@IdAlmacen", Id, DbType.Int32);
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.deleteAlmacen,parameter,commandType:CommandType.StoredProcedure);
+                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.deleteAlmacen,parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
