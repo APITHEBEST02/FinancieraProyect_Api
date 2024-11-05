@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Domain.Models.Configuracion
 {
-    public class Interes
+    public class InteresCredito
     {
         public int IdInteres { get; set; }
         public string Codigo { get; set; }
@@ -15,9 +15,9 @@ namespace Domain.Models.Configuracion
         public decimal Monto { get; set; }
         public bool Estado { get; set; }
 
-        public Interes() { }
+        public InteresCredito() { }
 
-        public Interes(int idInteres, string codigo, string nombre, decimal monto, bool estado)
+        public InteresCredito(int idInteres, string codigo, string nombre, decimal monto, bool estado)
         {
             IdInteres = idInteres;
             Codigo = codigo;

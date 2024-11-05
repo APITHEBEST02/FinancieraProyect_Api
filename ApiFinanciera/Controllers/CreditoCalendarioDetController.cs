@@ -17,7 +17,7 @@ namespace ApiFinanciera.Controllers
             this.calendarioDet = calendarioDet;
         }
 
-        [HttpDelete("DeleteCalendarioDet/{Id}/{NumCuota}")]
+        [HttpDelete("delete/calendarioDet/{Id}/{NumCuota}")]
         public ActionResult<int> Delete([FromRoute] int Id, int NumCuota) {
             var result = calendarioDet.Delete(Id,NumCuota);
             if (result==0)
@@ -28,7 +28,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpPost("InsertCalendarioDet")]
+        [HttpPost("insert/calendarioDet")]
         public ActionResult<int> Insert([FromBody] DtoRequestDetCreditoInsert entity) { 
             var result = calendarioDet.Insert(entity);
             if (result==0)
@@ -38,7 +38,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpGet("ListarCalendarioDet/{id}/{numCuota}")]
+        [HttpGet("listar/calendarioDet/{id}/{numCuota}")]
         public ActionResult<List<DtoResponseCreditoCalendarioDet>> Listar([FromRoute] int id, int numCuota) { 
             var result = calendarioDet.Select(id,numCuota);
             if (result==null)

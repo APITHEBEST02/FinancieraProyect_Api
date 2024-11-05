@@ -18,7 +18,7 @@ namespace ApiFinanciera.Controllers
             this.credito = credito;
         }
 
-        [HttpGet("Anular/{id}")]
+        [HttpGet("anular/credito/{id}")]
         public ActionResult<int> Anular(int id) {
             var result = credito.Anular(id);
             if (result == null)
@@ -29,7 +29,7 @@ namespace ApiFinanciera.Controllers
         }
         
         
-        [HttpGet("Aprobar/{id}")]
+        [HttpGet("Aprobar/credito/{id}")]
         public ActionResult<int> Aprobar(int id)
         {
             var result = credito.Aprobar(id);
@@ -41,7 +41,7 @@ namespace ApiFinanciera.Controllers
         }
 
         
-        [HttpGet("Cancelacion/{id}/{opcion}")]
+        [HttpGet("cancelacion/credito/{id}/{opcion}")]
         public ActionResult<int> Cancelacion(int id, int opcion) {
             var result = credito.Cancelacion(id, opcion);
             if (result==null)
@@ -52,7 +52,7 @@ namespace ApiFinanciera.Controllers
         }
 
         
-        [HttpGet("Calendario/{id}")]
+        [HttpGet("calendario/credito/{id}")]
         public ActionResult<List<DtoResponseCalendario>> Calendario(int id) { 
             var result = credito.Calendario(id);
             if (result == null) { 
@@ -62,7 +62,7 @@ namespace ApiFinanciera.Controllers
          
         }
         
-        [HttpGet("Delete/{id}")]
+        [HttpGet("delete/credito/{id}")]
         public ActionResult<int> Delete(int id)
         {
             var result = credito.Delete(id);
@@ -73,7 +73,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpPost("Insert")]
+        [HttpPost("insert/credito")]
         public ActionResult<int> Insert([FromBody] DtoRequestCreditoInsert entity) { 
             var result = credito.Insert(entity);
             if (result == 0) {
