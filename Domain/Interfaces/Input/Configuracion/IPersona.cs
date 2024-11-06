@@ -1,4 +1,5 @@
-﻿using Domain.Dtos.Response;
+﻿using Domain.Dtos.Request;
+using Domain.Dtos.Response;
 using Domain.Models.Configuracion;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Domain.Interfaces.Input.Configuracion
     public interface IPersona
     {
         public Task<int> DeletePersona(int id);
-        public Task<int> InsertPersona(Persona value);
-        public Task<List<DtoPersonaUbigeo>> SelectPersona();
-        public Task<DtoPersonaUbigeo> SelectPersonaId();
-        public Task<int> UpdatePersona(Persona value);
+        public Task<int> InsertPersona(DtoRequestPersonaInsert value);
+        public Task<List<DtoPersona>> SelectPersona();
+        public Task<DtoPersona> SelectPersonaId(int id);
+        public Task<int> UpdatePersona(DtoRequestPersonaUpdate value);
     }
 }

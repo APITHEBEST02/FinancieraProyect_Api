@@ -31,7 +31,8 @@ builder.Services.AddScoped<OConfigProducto>(provider => new RConfigProducto(conn
 builder.Services.AddScoped<IConfigProducto, SConfigProducto>();
 
 //EndPoint Persona
-//builder.Services.AddScoped<OPersona>(provider => new RPersona(connectionString));
+builder.Services.AddScoped<OPersona>(provider => new RPersona(connectionString));
+builder.Services.AddScoped<IPersona, SPersona>();
 
 
 // Add services to the container.

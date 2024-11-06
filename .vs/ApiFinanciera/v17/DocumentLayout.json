@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\projects\\FinancieraProyect_Api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0502DDE8-9EB7-41BA-B710-A247778ECB33}|Infrastructure\\Infrastructure.csproj|d:\\projects\\financieraproyect_api\\infrastructure\\repositorio\\configuracion\\rpersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0502DDE8-9EB7-41BA-B710-A247778ECB33}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositorio\\configuracion\\rpersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86996833-FCB0-432B-8823-01C7820AD47D}|ApiFinanciera\\ApiFinanciera.csproj|d:\\projects\\financieraproyect_api\\apifinanciera\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86996833-FCB0-432B-8823-01C7820AD47D}|ApiFinanciera\\ApiFinanciera.csproj|solutionrelative:apifinanciera\\controllers\\personacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65D81912-8366-4736-A650-3856D9FAE5BF}|Domain\\Domain.csproj|d:\\projects\\financieraproyect_api\\domain\\dtos\\request\\dtorequestpersonaupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65D81912-8366-4736-A650-3856D9FAE5BF}|Domain\\Domain.csproj|solutionrelative:domain\\dtos\\request\\dtorequestpersonaupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65D81912-8366-4736-A650-3856D9FAE5BF}|Domain\\Domain.csproj|d:\\projects\\financieraproyect_api\\domain\\interfaces\\input\\configuracion\\ipersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65D81912-8366-4736-A650-3856D9FAE5BF}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\input\\configuracion\\ipersona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86996833-FCB0-432B-8823-01C7820AD47D}|ApiFinanciera\\ApiFinanciera.csproj|d:\\projects\\financieraproyect_api\\apifinanciera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86996833-FCB0-432B-8823-01C7820AD47D}|ApiFinanciera\\ApiFinanciera.csproj|solutionrelative:apifinanciera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +51,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IPersona.cs",
+              "DocumentMoniker": "D:\\projects\\FinancieraProyect_Api\\Domain\\Interfaces\\Input\\Configuracion\\IPersona.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\Input\\Configuracion\\IPersona.cs",
+              "ToolTip": "D:\\projects\\FinancieraProyect_Api\\Domain\\Interfaces\\Input\\Configuracion\\IPersona.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\Input\\Configuracion\\IPersona.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:33:59.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DtoRequestPersonaUpdate.cs",
+              "DocumentMoniker": "D:\\projects\\FinancieraProyect_Api\\Domain\\Dtos\\Request\\DtoRequestPersonaUpdate.cs",
+              "RelativeDocumentMoniker": "Domain\\Dtos\\Request\\DtoRequestPersonaUpdate.cs",
+              "ToolTip": "D:\\projects\\FinancieraProyect_Api\\Domain\\Dtos\\Request\\DtoRequestPersonaUpdate.cs",
+              "RelativeToolTip": "Domain\\Dtos\\Request\\DtoRequestPersonaUpdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:34:22.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonaController.cs",
+              "DocumentMoniker": "D:\\projects\\FinancieraProyect_Api\\ApiFinanciera\\Controllers\\PersonaController.cs",
+              "RelativeDocumentMoniker": "ApiFinanciera\\Controllers\\PersonaController.cs",
+              "ToolTip": "D:\\projects\\FinancieraProyect_Api\\ApiFinanciera\\Controllers\\PersonaController.cs",
+              "RelativeToolTip": "ApiFinanciera\\Controllers\\PersonaController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:33:47.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RPersona.cs",
+              "DocumentMoniker": "D:\\projects\\FinancieraProyect_Api\\Infrastructure\\Repositorio\\Configuracion\\RPersona.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositorio\\Configuracion\\RPersona.cs",
+              "ToolTip": "D:\\projects\\FinancieraProyect_Api\\Infrastructure\\Repositorio\\Configuracion\\RPersona.cs",
+              "RelativeToolTip": "Infrastructure\\Repositorio\\Configuracion\\RPersona.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAA0wJgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T20:58:02.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\projects\\FinancieraProyect_Api\\ApiFinanciera\\Program.cs",
+              "RelativeDocumentMoniker": "ApiFinanciera\\Program.cs",
+              "ToolTip": "D:\\projects\\FinancieraProyect_Api\\ApiFinanciera\\Program.cs",
+              "RelativeToolTip": "ApiFinanciera\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T17:05:09.846Z",
+              "EditorCaption": ""
             }
           ]
         }
