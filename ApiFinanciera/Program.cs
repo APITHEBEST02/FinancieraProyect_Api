@@ -30,6 +30,10 @@ builder.Services.AddScoped<IAlmacen, SAlmacen>();
 builder.Services.AddScoped<OConfigProducto>(provider => new RConfigProducto(connectionString));
 builder.Services.AddScoped<IConfigProducto, SConfigProducto>();
 
+//EndPoint Persona
+//builder.Services.AddScoped<OPersona>(provider => new RPersona(connectionString));
+
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
