@@ -61,5 +61,12 @@ namespace Infrastructure.Utilidades
         public static string selectInteresCredito = "CONFIGURACION.sp_select_Interes";
         public static string selectIdInteresCredito = "CONFIGURACION.sp_select_InteresId";
         public static string updateInteresCredito = "CONFIGURACION.sp_update_Interes";
+
+        //Persona
+        public static string selectPersona = "CONFIGURACION.sp_select_Persona";
+        public static string updatePersona = "CONFIGURACION.sp_update_Persona";
+        public static string deletePersona = "CONFIGURACION.sp_delete_Persona";
+        public static string selectPersonaId = "CONFIGURACION.sp_select_PersonaId";
+        public static string insertPersona = "CONFIGURACION.sp_insert_Persona";
     }
 }
