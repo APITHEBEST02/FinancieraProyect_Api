@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Domain.Dtos.Request;
 using Domain.Dtos.Response;
 using Domain.Interfaces.Output.Configuracion;
 using Domain.Models.Configuracion;
@@ -42,7 +43,7 @@ namespace Infrastructure.Repositorio.Configuracion
             }
         }
 
-        public async Task<int> InsertPersona(Persona value,string TipoPersona)
+        public async Task<int> InsertPersona(DtoRequestPersonaInsert value)
         {
             using (var con = new SqlConnection(cn))
             {
@@ -58,7 +59,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@ApMaterno",value.ApMaterno, DbType.String);
                     parameter.Add("@Direccion",value.Direccion, DbType.String);
                     parameter.Add("@NumContacto",value.NumContacto, DbType.String);
-                    parameter.Add("@TipoPersona",TipoPersona, DbType.String);
+                    parameter.Add("@TipoPersona", value.TipoPersona, DbType.String);
                     parameter.Add("@CodigoModular",value.CodigoModular, DbType.String);
                     parameter.Add("@Empleador",value.Empleador, DbType.String);
                     parameter.Add("@Condicion",value.Condicion, DbType.Int32);
@@ -67,25 +68,26 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@NroTarjeta",value.NroTarjeta,DbType.String);
                     parameter.Add("@MesTarjeta",value.MesTarjeta,DbType.String);
                     parameter.Add("@AnioTarjeta",value.AnioTarjeta,DbType.String);
-
+                   
                     var query = await con.QueryFirstAsync<int>(spNombre.insertPersona, parameter, commandType: CommandType.StoredProcedure);
                     return query;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    return 0;
+                    throw new ApplicationException("Ocurrió un error en la ejecución del procedimiento.", ex);
+                    
                 }
             }
         }
 
-        public async Task<List<DtoPersonaUbigeo>> SelectPersona()
+        public async Task<List<DtoPersona>> SelectPersona()
         {
             using (var con = new SqlConnection(cn))
             {
                 try
                 {
                     con.Open();
-                    var query = await con.QueryAsync<DtoPersonaUbigeo>(spNombre.selectPersona, null, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryAsync<DtoPersona>(spNombre.selectPersona, null, commandType: CommandType.StoredProcedure);
 
                     return query.ToList();
                 }
@@ -96,7 +98,7 @@ namespace Infrastructure.Repositorio.Configuracion
             }
         }
 
-        public async Task<DtoPersonaUbigeo> SelectPersonaId(int id)
+        public async Task<DtoPersona> SelectPersonaId(int id)
         {
             using (var con = new SqlConnection(cn))
             {
@@ -107,18 +109,19 @@ namespace Infrastructure.Repositorio.Configuracion
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdPersona", id, DbType.Int32);
 
-                    var query = await con.QueryFirstAsync<DtoPersonaUbigeo>(spNombre.selectPersona, null, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryFirstAsync<DtoPersona>(spNombre.selectPersonaId, parameter, commandType: CommandType.StoredProcedure);
 
                     return query;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    return null;
+                    throw new ApplicationException("Ocurrió un error en la ejecución del procedimiento.", ex);
+
                 }
             }
         }
 
-        public async Task<int> UpdatePersona(Persona value)
+        public async Task<int> UpdatePersona(DtoRequestPersonaUpdate value)
         {
             using (var con = new SqlConnection(cn))
             {
@@ -147,9 +150,9 @@ namespace Infrastructure.Repositorio.Configuracion
                     var query = await con.QueryFirstAsync<int>(spNombre.updatePersona, parameter, commandType: CommandType.StoredProcedure);
                     return query;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    return 0;
+                    throw new ApplicationException("Ocurrió un error en la ejecución del procedimiento.", ex);
                 }
             }
         }

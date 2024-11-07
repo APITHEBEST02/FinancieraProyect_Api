@@ -21,3 +21,15 @@ D:\GitHub\ApiFinanciera\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.dll
 D:\GitHub\ApiFinanciera\FinancieraProyect_Api\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\GitHub\ApiFinanciera\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.pdb
 D:\GitHub\ApiFinanciera\FinancieraProyect_Api\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\projects\FinancieraProyect_Api\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\projects\FinancieraProyect_Api\Domain\bin\Debug\net8.0\Domain.dll
+D:\projects\FinancieraProyect_Api\Domain\bin\Debug\net8.0\Domain.pdb
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.dll
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\Domain.pdb
+D:\projects\FinancieraProyect_Api\Domain\obj\Debug\net8.0\ref\Domain.dll

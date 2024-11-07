@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JUuOOvjXaXPyoudX3BfY27cZiObC5qN38Sp3q978XZV9C8PvQbcMRUjJj1fpYARJCWswVDPEF8qGi+rlNemOwg==",
+  "dgSpecHash": "K4X665RwWnFkCDGcpvZd6oecgjwGHYp1gd7eu7Jvg5/XGcmW3ym1f/RJuUojtBfdGn1czjDc4c5HVvsbz8UAkw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\projects\\FinancieraProyect_Api\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

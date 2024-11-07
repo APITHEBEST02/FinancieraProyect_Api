@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj": {}
+    "D:\\projects\\FinancieraProyect_Api\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj": {
+    "D:\\projects\\FinancieraProyect_Api\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\projects\\FinancieraProyect_Api\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\lrico\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\ApiFinanciera\\FinancieraProyect_Api\\Domain\\obj\\",
+        "projectPath": "D:\\projects\\FinancieraProyect_Api\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\flord\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\FinancieraProyect_Api\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lrico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\flord\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
