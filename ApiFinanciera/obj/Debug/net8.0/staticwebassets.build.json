@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "jlYj8jbYryXFioGKRP+CuavuZr7m9slQ4a+zEYsL2SY=",
+  "Hash": "fKH3gcSIIR0Oa2sLVjgTkG4xoW4WY83ZGOQzsF4r34c=",
   "Source": "ApiFinanciera",
   "BasePath": "_content/ApiFinanciera",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

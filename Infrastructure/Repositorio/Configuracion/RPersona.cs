@@ -33,7 +33,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdPersona", id,DbType.Int32);
 
-                    var query = await con.QueryFirstAsync<int>(spNombre.deletePersona, parameter,commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryFirstAsync<int>(spNombre.DELETE_PERSONA, parameter,commandType: CommandType.StoredProcedure);
                     return query;
                 }
                 catch
@@ -69,7 +69,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@MesTarjeta",value.MesTarjeta,DbType.String);
                     parameter.Add("@AnioTarjeta",value.AnioTarjeta,DbType.String);
                    
-                    var query = await con.QueryFirstAsync<int>(spNombre.insertPersona, parameter, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryFirstAsync<int>(spNombre.INSERT_PERSONA, parameter, commandType: CommandType.StoredProcedure);
                     return query;
                 }
                 catch (Exception ex)
@@ -87,7 +87,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     con.Open();
-                    var query = await con.QueryAsync<DtoPersona>(spNombre.selectPersona, null, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryAsync<DtoPersona>(spNombre.SELECT_PERSONA, null, commandType: CommandType.StoredProcedure);
 
                     return query.ToList();
                 }
@@ -109,7 +109,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdPersona", id, DbType.Int32);
 
-                    var query = await con.QueryFirstAsync<DtoPersona>(spNombre.selectPersonaId, parameter, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryFirstAsync<DtoPersona>(spNombre.SELECT_ID_PERSONA, parameter, commandType: CommandType.StoredProcedure);
 
                     return query;
                 }
@@ -147,7 +147,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@MesTarjeta", value.MesTarjeta, DbType.String);
                     parameter.Add("@AnioTarjeta", value.AnioTarjeta, DbType.String);
 
-                    var query = await con.QueryFirstAsync<int>(spNombre.updatePersona, parameter, commandType: CommandType.StoredProcedure);
+                    var query = await con.QueryFirstAsync<int>(spNombre.UPDATE_PERSONA, parameter, commandType: CommandType.StoredProcedure);
                     return query;
                 }
                 catch (Exception ex)

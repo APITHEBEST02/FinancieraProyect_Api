@@ -30,7 +30,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 var parameter = new DynamicParameters();
                 try
                 {
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.deleteDescripTipoPersona,parameter,commandType:CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.DELETE_DESCRIP_TIPO_PERSONA, parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (Exception ex)
                 {
@@ -50,7 +50,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Nombre", value.Nombre, DbType.String);
                     parameter.Add("@Codigo",value.Codigo,DbType.String);
 
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.insertDescripTipoPersona, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.INSERT_DESCRIP_TIPO_PERSONA, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (Exception ex)
                 {
@@ -68,7 +68,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
 
-                    var result = await connection.QueryAsync<DescripTipoPersona>(Utilidades.spNombre.selectDescripTipoPersona, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QueryAsync<DescripTipoPersona>(Utilidades.spNombre.SELECT_DESCRIP_TIPO_PERSONA, commandType: CommandType.StoredProcedure);
                     return result.ToList();
                 }
                 catch (Exception ex)
@@ -87,7 +87,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
 
-                    var result = await connection.QueryFirstOrDefaultAsync<DescripTipoPersona>(Utilidades.spNombre.selectIdDescripTipoPersona, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QueryFirstOrDefaultAsync<DescripTipoPersona>(Utilidades.spNombre.SELECT_ID_DESCRIP_TIPO_PERSONA, commandType: CommandType.StoredProcedure);
                     return result;
                 }
                 catch (Exception ex)
@@ -109,7 +109,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Nombre", value.Nombre, DbType.String);
                     parameter.Add("@Codigo", value.Codigo, DbType.String);
 
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.updateDescripTipoPersona, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.UPDATE_DESCRIP_TIPO_PERSONA, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (Exception ex)
                 {

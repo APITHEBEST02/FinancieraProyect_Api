@@ -32,7 +32,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     parameter.Add("@IdConfigProductoCredito", id, DbType.Int32);
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.deleteConfigProducto, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.DELETE_CONFIG_PRODUCTO, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -52,7 +52,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@IdInteres", value.IdInteres, DbType.Int32);
                     parameter.Add("@IdTipoContrato", value.IdTipoContrato, DbType.Int32);
                     parameter.Add("@IdTipoGarantia", value.IdTipoGarantia, DbType.Int32);
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.insertConfigProducto, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.INSERT_CONFIG_PRODUCTO, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch (Exception ex)
@@ -71,7 +71,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     parameter.Add("@IdProductoCredito", idProductoCredito, DbType.Int32);
-                    var result = await connection.QueryAsync<DtoResponseConfigProducto>(Utilidades.spNombre.selectConfigProducto,parameter,commandType:CommandType.StoredProcedure);
+                    var result = await connection.QueryAsync<DtoResponseConfigProducto>(Utilidades.spNombre.SELECT_CONFIG_PRODUCTO, parameter,commandType:CommandType.StoredProcedure);
                     return result.ToList();
                 }
                 catch (Exception ex)
@@ -90,7 +90,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     parameter.Add("@IdConfigProductoCredito", IdConfigProductoCredito, DbType.Int32);
-                    var result = await connection.QueryFirstOrDefaultAsync<DtoResponseConfigProducto>(Utilidades.spNombre.selectIdConfigProducto, parameter, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QueryFirstOrDefaultAsync<DtoResponseConfigProducto>(Utilidades.spNombre.SELECT_ID_CONFIG_PRODUCTO, parameter, commandType: CommandType.StoredProcedure);
                     return result;
                 }
                 catch (Exception ex)
@@ -113,7 +113,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@IdInteres", value.IdInteres, DbType.Int32);
                     parameter.Add("@IdTipoContrato", value.IdTipoContrato, DbType.Int32);
                     parameter.Add("@IdTipoGarantia", value.IdTipoGarantia, DbType.Int32);
-                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.updateConfigProducto, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QuerySingleOrDefaultAsync<int>(Utilidades.spNombre.UPDATE_CONFIG_PRODUCTO, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch (Exception ex)

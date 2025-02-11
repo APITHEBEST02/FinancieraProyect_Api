@@ -30,7 +30,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito, DbType.Int32);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.anularCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.ANULAR_CREDITO, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch (SqlException ex)
@@ -50,7 +50,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito,DbType.Int32);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.aprobarCredito, parameter,commandType:CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.APROBAR_CREDITO, parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -68,7 +68,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito,DbType.Int32);
-                    return connection.Query<DtoResponseCalendario>(Utilidades.spNombre.calendarioCredito, parameter,commandType:CommandType.StoredProcedure).ToList();
+                    return connection.Query<DtoResponseCalendario>(Utilidades.spNombre.CALENDARIO_CREDITO, parameter,commandType:CommandType.StoredProcedure).ToList();
                 }
                 catch (SqlException ex)
                 {
@@ -86,7 +86,7 @@ namespace Infrastructure.Repositorio.Banca
                 {
                     parameter.Add("@IdCredito", IdCredito, DbType.Int32);
                     parameter.Add("@Opcion", Opcion, DbType.Int32);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.cancelacionCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.CANCELACION_CREDITO, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (SqlException ex){
                     throw new ApplicationException("Ocurrió un error en la ejecución del procedimiento.", ex);
@@ -103,7 +103,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito, DbType.Int32);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.cancelacionCreditoJob, parameter, commandType: CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.CANCELACION_CREDITO_JOB, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -120,7 +120,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito, DbType.Int32);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.deleteCredito, parameter,commandType:CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.DELETE_CREDITO, parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -146,7 +146,7 @@ namespace Infrastructure.Repositorio.Banca
                     parameter.Add("@MontoCapital", credito.MontoCapital, DbType.Decimal);
                     parameter.Add("@NroCheque", credito.NroCheque, DbType.String);
 
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.insertCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.INSERT_CREDITO, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -163,7 +163,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdPersona", IdPersona);
-                    return connection.Query<DtoResponseCredito>(Utilidades.spNombre.selectCredito, parameter, commandType: CommandType.StoredProcedure).ToList();
+                    return connection.Query<DtoResponseCredito>(Utilidades.spNombre.SELECT_CREDITO, parameter, commandType: CommandType.StoredProcedure).ToList();
                 }
                 catch (SqlException ex)
                 {
@@ -182,7 +182,7 @@ namespace Infrastructure.Repositorio.Banca
                 try
                 {
                     parameter.Add("@IdCredito", IdCredito);
-                    return connection.QueryFirstOrDefault<DtoResponseCredito>(Utilidades.spNombre.selectIdCredito, parameter, commandType: CommandType.StoredProcedure)!;
+                    return connection.QueryFirstOrDefault<DtoResponseCredito>(Utilidades.spNombre.SELECT_ID_CREDITO, parameter, commandType: CommandType.StoredProcedure)!;
                 }
                 catch (SqlException ex)
                 {
@@ -211,7 +211,7 @@ namespace Infrastructure.Repositorio.Banca
                     parameter.Add("@MontoCapital",credito.MontoCapital);
                     parameter.Add("@NroCheque",credito.NroCheque);
 
-                    return connection.QuerySingle<int>(Utilidades.spNombre.updateCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return connection.QuerySingle<int>(Utilidades.spNombre.UPDATE_CREDITO, parameter, commandType: CommandType.StoredProcedure);
 
                 }catch  (SqlException ex)
                 {

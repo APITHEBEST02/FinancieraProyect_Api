@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiFinanciera.Controllers
 {
-    [Route("[controller]")]
+    [Route("persona")]
     [ApiController]
     public class PersonaController : ControllerBase
     {
@@ -18,7 +18,7 @@ namespace ApiFinanciera.Controllers
             this.persona = persona;
         }
 
-        [HttpDelete("delete/persona/{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<ActionResult<int>> Delete([FromRoute] int id) {
             var result = await persona.DeletePersona(id);
             if (result==null)
@@ -29,7 +29,7 @@ namespace ApiFinanciera.Controllers
         }
 
         
-        [HttpPost("insert/persona")]
+        [HttpPost("insert")]
         public async Task<ActionResult<int>> Insert([FromBody] DtoRequestPersonaInsert value) { 
             var result =  await persona.InsertPersona(value);
             if (result==null) { 
@@ -39,7 +39,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpPut("update/persona")]
+        [HttpPut("update")]
         public async Task<ActionResult<int>> Update([FromBody] DtoRequestPersonaUpdate value)
         {
             var result = await persona.UpdatePersona(value);
@@ -50,7 +50,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpGet("select/persona")]
+        [HttpGet("select")]
         public async Task<ActionResult<List<DtoPersona>>> Select() { 
         
             var result = await persona.SelectPersona();
@@ -61,7 +61,7 @@ namespace ApiFinanciera.Controllers
             return Ok(result);
         }
 
-        [HttpGet("select/idpersona/{Id}")]
+        [HttpGet("select/{Id}")]
         public async Task<ActionResult<DtoPersona>> SelectId([FromRoute] int Id) {
             var result = await persona.SelectPersonaId(Id);
             if (result == null )

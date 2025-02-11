@@ -34,18 +34,48 @@ builder.Services.AddScoped<IConfigProducto, SConfigProducto>();
 builder.Services.AddScoped<OPersona>(provider => new RPersona(connectionString));
 builder.Services.AddScoped<IPersona, SPersona>();
 
+//EndPoint ProductoCredito
+builder.Services.AddScoped<OProductoCredito>(provider => new RProductoCredito(connectionString));
+builder.Services.AddScoped<IProductoCredito, SProductoCredito>();
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+//EndPoint Sede
+builder.Services.AddScoped<OSede>(provider => new RSede(connectionString));
+builder.Services.AddScoped<ISede,SSede>();
+
+//EndPoint Tipo Contrato
+builder.Services.AddScoped<OTipoContratoCredito>(provider=>new RTipoContratoCredito(connectionString));
+builder.Services.AddScoped<ITipoContratoCredito, STipoContrato>();
+
+//EndPoint Tipo Garantia
+builder.Services.AddScoped<OTipoContratoGarantiaCredito>(provider => new RTipoContratoGarantia(connectionString));
+builder.Services.AddScoped<ITipoContratoGarantiaCredito, STipoGarantia>();
+
+//EndPoint Tipo persona
+builder.Services.AddScoped<OTipoPersona>(provider => new RTipoPersona(connectionString));
+builder.Services.AddScoped<ITipoPersona, STipoPersona>();
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy => policy.WithOrigins("http://localhost:4200", "https://localhost:4200")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials());
+});
+
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api Financiera - Arquitectura Hexagonal", Version = "v1" });
 });
 
+
 var app = builder.Build();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

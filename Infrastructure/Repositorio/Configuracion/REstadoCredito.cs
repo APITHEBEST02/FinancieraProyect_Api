@@ -30,7 +30,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 {
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdEstadoCredito", id, DbType.Int32);
-                    var result = await connection.QuerySingleAsync<int>(Utilidades.spNombre.deleteEstadoCredito, parameter, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QuerySingleAsync<int>(Utilidades.spNombre.DELETE_ESTADO_CREDITO, parameter, commandType: CommandType.StoredProcedure);
                     return result;
                 }
                 catch (Exception ex)
@@ -50,7 +50,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     var parameter = new DynamicParameters();
                     parameter.Add("@Codigo", value.Codigo);
                     parameter.Add("@Nombre", value.Nombre);
-                    var result = await connection.QuerySingleAsync<int>(Utilidades.spNombre.insertEstadoCredito, parameter, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QuerySingleAsync<int>(Utilidades.spNombre.INSERT_ESTADO_CREDITO, parameter, commandType: CommandType.StoredProcedure);
                     return (int)result;
                 }
                 catch (Exception ex)

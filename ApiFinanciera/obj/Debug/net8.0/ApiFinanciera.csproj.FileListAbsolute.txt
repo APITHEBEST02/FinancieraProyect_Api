@@ -225,3 +225,7 @@ D:\projects\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\refint\ApiFinan
 D:\projects\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\ApiFinanciera.pdb
 D:\projects\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\ApiFinanciera.genruntimeconfig.cache
 D:\projects\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\ref\ApiFinanciera.dll
+D:\GitHub\ApiFinanciera\FinancieraProyect_Api\ApiFinanciera\bin\Debug\net8.0\ApiFinanciera.staticwebassets.endpoints.json
+D:\GitHub\ApiFinanciera\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\GitHub\ApiFinanciera\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\staticwebassets\msbuild.ApiFinanciera.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\GitHub\ApiFinanciera\FinancieraProyect_Api\ApiFinanciera\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

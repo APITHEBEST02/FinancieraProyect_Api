@@ -30,7 +30,7 @@ namespace Infrastructure.Repositorio.Banca
                 {
                     parameter.Add("@IdCredito", IdCredito);
                     parameter.Add("@NumCuota", NumCuota);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.deleteDetCredito, parameter,commandType:CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.DELETE_DET_CREDITO, parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -50,7 +50,7 @@ namespace Infrastructure.Repositorio.Banca
                     parameter.Add("@MontoPagado", model.MontoPagado);
                     parameter.Add("@NumCuota", model.NumCuota);
                     parameter.Add("@FechaPago", model.FechaPago);
-                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.insertDetCredito,parameter,commandType:CommandType.StoredProcedure);
+                    return connection.QuerySingleOrDefault<int>(Utilidades.spNombre.INSERT_DET_CREDITO,parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -70,7 +70,7 @@ namespace Infrastructure.Repositorio.Banca
                 {
                     parameter.Add("@IdCredito", IdCredito);
                     parameter.Add("@NumCuota", NumCuota);
-                    return connection.Query<DtoResponseCreditoCalendarioDet>(Utilidades.spNombre.selectDetCredito, parameter,commandType:CommandType.StoredProcedure).ToList();
+                    return connection.Query<DtoResponseCreditoCalendarioDet>(Utilidades.spNombre.SELECT_DET_CREDITO, parameter,commandType:CommandType.StoredProcedure).ToList();
                 }
                 catch (SqlException ex)
                 {

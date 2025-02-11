@@ -28,7 +28,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     con.Open();
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdInteres", id, DbType.Int32);
-                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.deleteInteresCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.DELETE_INTERES, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch
@@ -46,7 +46,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     con.Open();
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdProductoCredito", id, DbType.String);
-                    var result = await con.QueryAsync<InteresCredito>(Utilidades.spNombre.filtroInteresCredito, parameter, commandType: CommandType.StoredProcedure);
+                    var result = await con.QueryAsync<InteresCredito>(Utilidades.spNombre.FILTRO_INTERES, parameter, commandType: CommandType.StoredProcedure);
                     return result.ToList();
                 }
                 catch
@@ -68,7 +68,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Nombre", value.Nombre, DbType.String);
                     parameter.Add("@Monto", value.Monto, DbType.Decimal);
 
-                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.insertInteresCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.INSERT_INTERES, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch
@@ -87,7 +87,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     con.Open();
                     var parameter = new DynamicParameters();
                     parameter.Add("@IdInteres", id, DbType.Int32);
-                    var result = await con.QueryFirstAsync<InteresCredito>(Utilidades.spNombre.selectIdInteresCredito, null, commandType: CommandType.StoredProcedure);
+                    var result = await con.QueryFirstAsync<InteresCredito>(Utilidades.spNombre.SELECT_ID_INTERES, null, commandType: CommandType.StoredProcedure);
                     return result;
                 }
                 catch
@@ -104,7 +104,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     con.Open();
-                    var result = await con.QueryAsync<InteresCredito>(Utilidades.spNombre.selectInteresCredito, null, commandType: CommandType.StoredProcedure);
+                    var result = await con.QueryAsync<InteresCredito>(Utilidades.spNombre.SELECT_INTERES, null, commandType: CommandType.StoredProcedure);
                     return result.ToList();
                 }
                 catch
@@ -127,7 +127,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Nombre", value.Nombre, DbType.String);
                     parameter.Add("@Monto", value.Monto, DbType.Decimal);
 
-                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.updateInteresCredito, parameter, commandType: CommandType.StoredProcedure);
+                    return await con.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.UPDATE_INTERES, parameter, commandType: CommandType.StoredProcedure);
 
                 }
                 catch

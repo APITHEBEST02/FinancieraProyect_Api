@@ -28,7 +28,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 try
                 {
                     parameter.Add("@IdAlmacen", Id, DbType.Int32);
-                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.deleteAlmacen,parameter,commandType:CommandType.StoredProcedure);
+                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.DELETE_ALMACEN, parameter,commandType:CommandType.StoredProcedure);
                 }
                 catch (SqlException ex)
                 {
@@ -50,7 +50,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Codigo", value.Codigo);
                     parameter.Add("@Nombre", value.Nombre);
 
-                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.insertAlmacen, parameter, commandType:CommandType.StoredProcedure);
+                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.INSERT_ALMACEN, parameter, commandType:CommandType.StoredProcedure);
                 }
                 catch (Exception ex)
                 {
@@ -65,7 +65,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 connection.Open();
                 try
                 {
-                    var result = await connection.QueryAsync<DtoResponseAlmacen>(Utilidades.spNombre.selectAlmacen,null, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QueryAsync<DtoResponseAlmacen>(Utilidades.spNombre.SELECT_ALMACEN, null, commandType: CommandType.StoredProcedure);
                     return result.ToList();
                 }
                 catch (Exception ex)
@@ -82,7 +82,7 @@ namespace Infrastructure.Repositorio.Configuracion
                 connection.Open();
                 try
                 {
-                    var result = await connection.QueryFirstOrDefaultAsync<DtoResponseAlmacen>(Utilidades.spNombre.selectIdAlmacen, commandType: CommandType.StoredProcedure);
+                    var result = await connection.QueryFirstOrDefaultAsync<DtoResponseAlmacen>(Utilidades.spNombre.SELECT_ID_ALMACEN, commandType: CommandType.StoredProcedure);
                     return result;
                 }
                 catch (Exception ex)
@@ -107,7 +107,7 @@ namespace Infrastructure.Repositorio.Configuracion
                     parameter.Add("@Codigo", value.Codigo);
                     parameter.Add("@Nombre", value.Nombre);
 
-                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.updateAlmacen, parameter, commandType: CommandType.StoredProcedure);
+                    return await connection.QueryFirstOrDefaultAsync<int>(Utilidades.spNombre.UPDATE_ALMACEN, parameter, commandType: CommandType.StoredProcedure);
                 }
                 catch (Exception ex)
                 {
